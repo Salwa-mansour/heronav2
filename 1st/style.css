@@ -80,7 +80,7 @@
 
 
 .nav-links a:hover{
-    background-color: rgba(0, 0, 0, .151);
+    background-color: rgba(110, 59, 59, 0.596);
 }
 
 
@@ -141,6 +141,7 @@
     .hero::before{
         background-image: url(../imgs/wide1.jpg);
     }
+    
 }
 .flex-center{
     display: flex;
@@ -178,4 +179,10 @@
 .hero-message h2{
     padding-left: 30%;
     text-align: center;
+}
+@media (min-width:540px){
+    .hero-message h2{
+        
+        text-align: start;
+    }
 }
