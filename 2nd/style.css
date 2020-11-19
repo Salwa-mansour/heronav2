@@ -1,0 +1,108 @@
+/* nav tutorial styleings */
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Helvetica, sans-serif;
+    background-color: #bbb;
+}
+.header{
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 30;
+}
+.header ul{
+    list-style: none;
+    overflow: hidden;
+    height: 0;
+}
+.header li a{
+    display: block;
+    padding: 20px;
+    /* border-right: 1px solid rgb(116, 116, 116); */
+    text-decoration: none;
+}
+.logo{
+    display: inline-block;
+}
+/* menu icon */
+.header .menu-icon{
+    background-color: rgba(0,0,0,.1);
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+   
+}
+.header .menu-icon .nav-icon{
+    background: #333;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 25px;
+}
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .4s ease-out;
+  width: 100%;
+}
+.header .menu-icon .nav-icon::before{
+    top: 10px;
+}
+.header .menu-icon .nav-icon::after{
+    top: -10px;
+}
+/* menu btn */
+.header .menu-btn{
+    display: none;
+}
+.header .menu-btn:checked ~ .menu{
+    max-height: 240px;
+}
+/* this is me trying to make a semelrer effect for typing clup humpurgur icon */
+/* .header .menu-btn:hover ~ .menu-icon .nav-icon{
+    transform: rotate(45deg);
+}
+.header .menu-btn:hover ~ .menu-icon .nav-icon::before{
+    transform: rotate(45deg);
+    width: 18px;
+    top: 5px;
+    left: -5px;
+}
+.header .menu-btn:hover ~ .menu-icon .nav-icon:after {
+    transform: rotate(-45deg);
+    top: -5px;
+    left: -5px;
+   width: 18px;
+  } */
+/* ---------- the tutorial original styings -------------- */
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top:0;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top:0;
+  }
+  .header .menu-btn:checked ~ ul.menu{
+      height: 50vh;
+  }
+  @media (min-width:48em){
+      .header li {
+          float: left;
+      }
+
+     
+  }
